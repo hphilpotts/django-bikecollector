@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Bike Index </h1>
+<!-- dynamic list below: -->
+{% for bike in bikes reversed %}
+<!-- note that colons are not required here -->
+<div class="card">
+    <div class="card-content">
+        <span class="card-title"> {{ bike.make }} {{ bike.model }} </span>
+            <!-- note the syntax for render (cf. <%= [...] %> in EJS)-->
+        <p> Year: {{bike.year}} </p>
+        <p> Frame material: {{bike.material.0 |title }} ({{bike.material.1}})</p>
+        <p> Description: {{bike.description}} </p>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
