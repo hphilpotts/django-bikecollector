@@ -2,9 +2,8 @@
 
 {% block content %}
 
-<h1> Bike Index </h1>
-<!-- dynamic list below: -->
-{% for bike in bikes reversed %}
+<h1>Bike Details</h1>
+
 <div class="card">
     <div class="card-content">
         <div class="flex-container">
@@ -15,13 +14,18 @@
                 <p> Frame material: {{bike.material }} ({{bike.material_info}})</p>
                 <p> Description: {{bike.description}} </p>
             </div>
-            <div>
+            <!-- <div>
                 <a href="{% url 'detail' bike.id %}">
                     <img class="card-img" src="{{bike.image}}" alt="image of {{bike.name}}">
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
+    <div class="detail-img-container">
+        <a href="{% url 'detail' bike.id %}">
+            <img class="detail-img center" src="{{bike.image}}" alt="image of {{bike.name}}">
+        </a>
+    </div>
 </div>
-{% endfor %}
+
 {% endblock %}

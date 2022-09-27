@@ -41,5 +41,19 @@ Database `bikecollector` created in _pgAdmin4_, connected in `settings.py`. Migr
 - created superuser 'hphilpotts` for admin, logged in ok.       
 - registered `Bike` model in `main_app/admin.py`, successfully added as admin.      
 
-### Uploading images:       
+### Adding images:       
+- updated `Bike` model to include `image` property. Chose URL as string over upload using `ImageField` to reduce storage and make for simpler implementation. Migrated successfully.        
+- `index.html` updated and images added. Some images do not work - image type is important.     
+- CSS added to improve appearance:      
+
+![basic formatting work with images added]('readme_screenshots/Screenshot 2022-09-27 at 16.41.39.png')      
+
+### Detail view:        
+- making images clickable for details view. Added `<a></a>` tags around images in `index.html`, path added in `urls.py`, `views.py` updated.        
+- `/bikes/detail.html` created, CSS added.   
+
+- Also, hardcoded urls in `base.html` and `home.html` switched out for _Django_ `{% url %}`.        
+
+
+
 

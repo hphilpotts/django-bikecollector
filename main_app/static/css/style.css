@@ -13,3 +13,40 @@ footer.page-footer {
     padding-top: 0px;
     text-align: right;
 }
+
+/* .card {
+    padding: 20px;
+} */
+h1 {
+    color: #e57373;
+    text-shadow: 1px 1px 1px darkgrey;
+}
+
+.card-title {
+    color: #e57373;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-img {
+    max-height: 200px;
+    border: 2px solid #e57373;
+    border: 2px solid rgb(168, 225, 238);
+    border-radius: 10px;
+}
+
+.detail-img-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.detail-img {
+    max-width: 100%;
+    /* max-height: 300px; */
+    border: 2px solid rgb(168, 225, 238);
+    border-radius: 10px;
+}

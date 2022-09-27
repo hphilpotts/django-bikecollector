@@ -27,3 +27,7 @@ def about(req):
 def bikes_index(req):
     bikes = Bike.objects.all() # retrieves all Bike entries and saves into variable
     return render(req, 'bikes/index.html', { 'bikes': bikes })
+
+def bikes_detail(request, bike_id):
+    bike = Bike.objects.get(id = bike_id)
+    return render(request, 'bikes/detail.html', {'bike':bike})
