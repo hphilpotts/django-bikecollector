@@ -26,5 +26,20 @@ Database `bikecollector` created in _pgAdmin4_, connected in `settings.py`. Migr
 - reversed list using `{% for bike in bikes reversed %}` - `bikes.reverse()` of course did not work!        
 - also able to capitalise `bike.material.0` using `{{bike.material.0 |title }}`.        
 
+27/09/22        
 
+### Creating Bike Model:        
+- creating Bike class in `models.py`, ran `makemigrations` and `migrate` without issue.            
+    - avoiding needing to establish a second table for `bike.material` (currently a list):
+    - therefore separated out into two properties: `bike.material` and `bike.material_info    
+- commented out hard-coded Bike model and dictionaries in `views.py`, imported `Bike` from `.models`.       
+- updated `bikes_index` API with `bikes = Bike.objects.all()` - Django ORM.     
+- updated `bikes/index.html` to reflect changes to Bike objects.        
+- directly inserted test data into _pgAdmin4_, tested working ok.       
+
+### Creating superuser:     
+- created superuser 'hphilpotts` for admin, logged in ok.       
+- registered `Bike` model in `main_app/admin.py`, successfully added as admin.      
+
+### Uploading images:       
 

@@ -11,7 +11,7 @@
         <span class="card-title"> {{ bike.make }} {{ bike.model }} </span>
             <!-- note the syntax for render (cf. <%= [...] %> in EJS)-->
         <p> Year: {{bike.year}} </p>
-        <p> Frame material: {{bike.material.0 |title }} ({{bike.material.1}})</p>
+        <p> Frame material: {{bike.material }} ({{bike.material_info}})</p>
         <p> Description: {{bike.description}} </p>
     </div>
 </div>
