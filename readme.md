@@ -54,6 +54,20 @@ Database `bikecollector` created in _pgAdmin4_, connected in `settings.py`. Migr
 
 - Also, hardcoded urls in `base.html` and `home.html` switched out for _Django_ `{% url %}`.        
 
+### Using CBVs to implement Create, Edit and Delete:        
+
+#### Create:        
+- link added to `base.html`, path in `urls.py` and `BikeCreate` defined in `views.py`       
+- Creating `bike_form.html` in `main_app/templates/main_app/`, `csrf_token` included.       
+- _Hit_ `Reverse error` _due to using_ `bike_creates` _in path name, changed to_ `bikes_create`, now working ok.
+- added `get_absolute_url` to `Bike` model.     
+- _Hit_ `expecting endblock` _error, had used_ `{% form.as_table %}` _rather than_ `{{ form.as_table }}`, now working ok.       
+- Full Create functionality tested working ok.      
+
+#### Edit and Delete:       
+
+
+
 
 
 

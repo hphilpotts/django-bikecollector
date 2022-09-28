@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Bike
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 # Create your views here.
+
+class BikeCreate(CreateView):
+    model = Bike
+    fields = '__all__'
+
 def home(req):
     return render(req, 'home.html')
 

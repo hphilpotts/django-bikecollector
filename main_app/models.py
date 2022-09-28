@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models import Model
+from django.urls import reverse
 
 # Create your models here.
 class Bike(models.Model):
@@ -10,3 +11,6 @@ class Bike(models.Model):
     material_info = models.TextField(max_length=250) 
     description = models.TextField(max_length=250)
     image = models.CharField(max_length=100, default='no image added') 
+
+    def get_absolute_url(self):
+        return reverse('detail', kwargs = {'bike_id': self.id})
