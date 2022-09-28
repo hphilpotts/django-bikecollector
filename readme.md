@@ -73,6 +73,21 @@ _Resolved through the use of_ `git push origin main --force`
 - `bike_form.html` updated to load headings responsively depending on if Create or Edit is being performed.     
 - Full Edit and Delete Functionalites tested ok.        
 
+### Django One-Many Models:     
+- `Component` model added in `models.py`, Foreign Key constraint added, model registered in `admin.py`.        
+- Entity has appeared in _Django administration_, working ok to this point.     
+- _Getting a Programming Error to do with post - may be resolved as I work through next steps?_      
+- `__str__` overwritted for `Bike` in order to provide a more friendly output.      
+
+- `Component` table added to Bike Detail page.      
+- `forms.py` added for custom form, imported into `views.py`. `def bikes_detail` updated accordingly.    
+- _Above Programming Error fixed_: I had forgotten to migrate the new `Component` model...         
+- `<form>` added to Bike Detail, dropdown functionality added through Materialize JS `FormSelect`.      
+- All appears working ok.       
+- Added `POST` path to `urls.py`, updated `action=""` in `detail.html`, added `def add_feeding` API to `view.py`.       
+- Tested working ok!          
+
+
 
 
 

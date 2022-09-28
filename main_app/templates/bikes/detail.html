@@ -9,16 +9,10 @@
         <div class="flex-container">
             <div>
                 <span class="card-title"> {{ bike.make }} {{ bike.model }} </span>
-                <!-- note the syntax for render (cf. <%= [...] %> in EJS)-->
                 <p> Year: {{bike.year}} </p>
                 <p> Frame material: {{bike.material }} ({{bike.material_info}})</p>
                 <p> Description: {{bike.description}} </p>
             </div>
-            <!-- <div>
-                <a href="{% url 'detail' bike.id %}">
-                    <img class="card-img" src="{{bike.image}}" alt="image of {{bike.name}}">
-                </a>
-            </div> -->
         </div>
     </div>
     <div class="detail-img-container">
@@ -32,5 +26,37 @@
         <a href="{% url 'bikes_delete' bike.id %}" class="detail-buttons btn">Delete</a>
     </div>
 </div>
+
+<div>
+
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Component Type</th>
+                <th>Manufacturer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for component in bike.component_set.all %}
+            <tr>
+                <td>{{ component.get_comptype_display }}</td>
+                <td>{{ component.name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form action="{% url 'add_component' bike.id %}" method="post">
+        {% csrf_token %}
+        {{ component_form.as_p }}
+        <input type="submit" value="Add Component" class="btn">
+    </form>
+
+</div>
+
+<script>
+    let typeElememt = document.getElementById('id_comptype');
+    M.FormSelect.init(typeElememt);
+</script>
 
 {% endblock %}
