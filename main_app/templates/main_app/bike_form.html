@@ -2,6 +2,12 @@
 
 {% block content %}
 
+{% if object %}
+    <h1>Edit <span> {{ object.name }} </span></h1>
+{% else %}
+    <h1>Add a Bike</h1>
+{% endif %}
+
 <form action="" method="post">
     {% csrf_token %}
 

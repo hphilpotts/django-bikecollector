@@ -9,6 +9,14 @@ class BikeCreate(CreateView):
     model = Bike
     fields = '__all__'
 
+class BikeUpdate(UpdateView):
+    moddel = Bike
+    fields = '__all__'
+
+class BikeDelete(DeleteView):
+    model = Bike
+    success_url = '/bikes/'
+
 def home(req):
     return render(req, 'home.html')
 

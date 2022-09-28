@@ -26,6 +26,10 @@
             <img class="detail-img center" src="{{bike.image}}" alt="image of {{bike.name}}">
         </a>
     </div>
+    <div>
+        <a href="{% url 'bikes_update' bike.id %}">Edit</a>
+        <a href="{% url 'bikes_delete' bike.id %}">Delete</a>
+    </div>
 </div>
 
 {% endblock %}

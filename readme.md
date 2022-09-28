@@ -46,7 +46,7 @@ Database `bikecollector` created in _pgAdmin4_, connected in `settings.py`. Migr
 - `index.html` updated and images added. Some images do not work - image type is important.     
 - CSS added to improve appearance:      
 
-![basic formatting work with images added]('readme_screenshots/Screenshot 2022-09-27 at 16.41.39.png')      
+![basic formatting work with images added](readme_screenshots/bikecollector_screenshot1.png)      
 
 ### Detail view:        
 - making images clickable for details view. Added `<a></a>` tags around images in `index.html`, path added in `urls.py`, `views.py` updated.        
@@ -64,7 +64,15 @@ Database `bikecollector` created in _pgAdmin4_, connected in `settings.py`. Migr
 - _Hit_ `expecting endblock` _error, had used_ `{% form.as_table %}` _rather than_ `{{ form.as_table }}`, now working ok.       
 - Full Create functionality tested working ok.      
 
+**Side note: had made minor edits to readme directly in GitHub after yesterday's last commit, causing commit rejection just now.**
+_Resolved through the use of_ `git push origin main --force`        
+
 #### Edit and Delete:       
+- links added to `/bikes/detail.html`, paths to `urls.py`, CBV classes to `paths.py`.       
+- `bike_confirm_delete.html` added.     
+- `bike_form.html` updated to load headings responsively depending on if Create or Edit is being performed.     
+- Full Edit and Delete Functionalites tested ok.        
+
 
 
 
