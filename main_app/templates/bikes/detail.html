@@ -26,9 +26,10 @@
             <img class="detail-img center" src="{{bike.image}}" alt="image of {{bike.name}}">
         </a>
     </div>
-    <div>
-        <a href="{% url 'bikes_update' bike.id %}">Edit</a>
-        <a href="{% url 'bikes_delete' bike.id %}">Delete</a>
+    <div class="center-align" id="detail-button-div">
+        <a href="{% url 'index' %}" class="detail-buttons btn">Index</a>
+        <a href="{% url 'bikes_update' bike.id %}" class="detail-buttons btn">Edit</a>
+        <a href="{% url 'bikes_delete' bike.id %}" class="detail-buttons btn">Delete</a>
     </div>
 </div>
 

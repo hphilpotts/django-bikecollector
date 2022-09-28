@@ -14,6 +14,8 @@
                 <p> Year: {{bike.year}} </p>
                 <p> Frame material: {{bike.material }} ({{bike.material_info}})</p>
                 <p> Description: {{bike.description}} </p>
+                <br>
+                <a href="{% url 'detail' bike.id %}" class="btn">Bike Detail</a>
             </div>
             <div>
                 <a href="{% url 'detail' bike.id %}">

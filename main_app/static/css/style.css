@@ -3,10 +3,15 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: 'Jost', sans-serif;
 }
 
 main {
     flex: 1 0 auto;
+}
+
+.brand-logo {
+    left: 20px;
 }
 
 footer.page-footer {
@@ -14,12 +19,19 @@ footer.page-footer {
     text-align: right;
 }
 
-/* .card {
-    padding: 20px;
-} */
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
 h1 {
     color: #e57373;
     text-shadow: 1px 1px 1px darkgrey;
+}
+
+.btn {
+    background-color: #e57373;
+    font-size: smaller;
 }
 
 .card-title {
@@ -41,7 +53,8 @@ h1 {
 .detail-img-container {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 0px 20px 10px 20px;
+    
 }
 
 .detail-img {
@@ -49,4 +62,16 @@ h1 {
     /* max-height: 300px; */
     border: 2px solid rgb(168, 225, 238);
     border-radius: 10px;
+}
+
+#detail-button-div {
+    padding-bottom: 10px;
+}
+
+.detail-buttons {
+    margin: 0px 10px 0px 10px;
+}
+
+.bike-detail-link {
+    color: #e57373;
 }
