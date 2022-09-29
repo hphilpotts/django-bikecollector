@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Kit Detail</h1>
+
+<div class="row">
+    <div class="col s6 col-offset-3">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title"> {{ accessory.kit }} </span>
+                <p> Made by: {{ accessory.brand }} </p>
+            </div>
+            <!-- div for actions: -->
+            <div class="center-align" id="detail-button-div">
+                <a href="{% url 'accessories_update' accessory.id %}" class="btn">Edit</a>
+                <a href="{% url 'accessories_delete' accessory.id %}" class="btn">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

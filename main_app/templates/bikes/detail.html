@@ -27,6 +27,56 @@
     </div>
 </div>
 
+<a name="Accessories">
+<div class="row">
+    <div class="col s6">
+        <h5> Kit added to {{ bike.make }} {{ bike.model }} :</h5>
+        {% if bike.accessories.count %}
+            {% for accessory in bike.accessories.all %}
+            <div class="card">
+                <div class="card-content center-align">
+                    <span class="card-title">
+                        {{ accessory.brand }} {{ accessory.kit }}
+                    </span>
+                </div>
+                <div class="center-align" id="detail-button-div">
+                    <form action="{% url 'unassoc_accessory' bike.id accessory.id %}#Accessories" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn">Remove Kit Item</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <h5>No kit added to bike yet! Click 'add kit item' on the right to start adding kit to this bike.</h5>
+        {% endif %}
+    </div>
+
+    <div class="col s6">
+        <h5>Available Kit</h5>
+        {% if accessories.count %}
+            {% for accessory in accessories.all %}
+            <div class="card">
+                <div class="card-content center-align">
+                    <span class="card-title">
+                        {{ accessory.brand }} {{ accessory.kit }}
+                    </span>
+                </div>
+                <div class="center-align" id="detail-button-div">
+                    <form action="{% url 'assoc_accessory' bike.id accessory.id %}#Accessories" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn">Add Kit Item</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <h5> No more kit available to add to bike! </h5>
+        {% endif %}        
+    </div>
+</div>
+</a>
+
 <div>
 
     <table class="striped">

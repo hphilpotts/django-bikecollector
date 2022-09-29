@@ -87,6 +87,38 @@ _Resolved through the use of_ `git push origin main --force`
 - Added `POST` path to `urls.py`, updated `action=""` in `detail.html`, added `def add_feeding` API to `view.py`.       
 - Tested working ok!          
 
+### Django Many-Many Models:        
+
+#### Creating a new model with all CBV CRUD Ops:        
+- `Accessory` model added in `models.py` (with `verbose_name_plural` set to 'accessories'), migrated and verified in _pgAdmin4_     
+- links added to `base.html`, paths created.    
+- `Accessory` imported into `views.html` along with `ListView` and `DetailView` from `django.views.generic`.        
+- CBVs defined in `views.html`.     
+- confirm_delete, detail, form and list templates added.        
+- eventually tested working ok once spelling errors had been corrected.     
+
+#### Relationing modules:       
+- added access to `accessories` on `bikes` - _had to move_ `Accessory` _class definition to above_ `Bike`      
+- Migrated, verifed as ok.      
+- Paths updated and views updated. Bike Detail template updated to show kit.        
+- `Accessory` added to `admin.py`. Checked working ok in admin panel.
+
+- Adding user add/remove kit from bike functionality.       
+- Firstly: show non-added kit in Bike detail by adding `kit_not_on_bike` to `bikes_detail` within `views.py`.       
+_Need to get my head around exactly how this works:_       
+`kit_not_on_bike = Bike.objects.exclude(id__in = bike.accessories.all().values_list('id'))`     
+- `/bikes/detail.html` updated to show non-added kit, buttons to add/remove.        
+- Eventually tested working ok: _had mixed up bike/accessory in some lines of code_.        
+
+#### Final tweaks:      
+- formatting updated.               
+- `class BikeUpdate` edited to remove 'accessories' field.      
+
+### Remaining tasks:        
+- do something with the 'Home' and 'About' pages.       
+- add more entries!     
+
+
 
 
 

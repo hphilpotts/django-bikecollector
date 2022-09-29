@@ -17,6 +17,7 @@ main {
 footer.page-footer {
     padding-top: 0px;
     text-align: right;
+    margin-top: 10px;
 }
 
 .card {
@@ -74,4 +75,13 @@ h1 {
 
 .bike-detail-link {
     color: #e57373;
+}
+
+label {
+    color: rgb(61, 61, 61);
+    font-size: larger;
+}
+
+table {
+    margin-bottom: 10px;
 }

@@ -9,6 +9,17 @@ COMPONENTS = (
 )
 
 # Create your models here.
+class Accessory(models.Model):
+    brand = models.CharField(max_length=50)
+    kit = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"{self.brand} {self.kit}"
+
+    def get_absolute_url(self):
+        return reverse('accessories_detail', kwargs= {'pk': self.id })
+    class Meta:
+        verbose_name_plural = "accessories"
 class Bike(models.Model):
     make = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
@@ -16,7 +27,8 @@ class Bike(models.Model):
     material = models.CharField(max_length=100)
     material_info = models.TextField(max_length=250) 
     description = models.TextField(max_length=250)
-    image = models.CharField(max_length=100, default='no image added') 
+    image = models.CharField(max_length=100, default='no image added')
+    accessories = models.ManyToManyField(Accessory) 
 
     def get_absolute_url(self):
         return reverse('detail', kwargs = {'bike_id': self.id})
@@ -36,4 +48,3 @@ class Component(models.Model):
     # class Meta:
     #   ordering = ['']
 
-    
