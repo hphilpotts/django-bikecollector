@@ -85,3 +85,8 @@ label {
 table {
     margin-bottom: 10px;
 }
+
+.select-dropdown {
+    color: rgb(108, 108, 108);
+    font-size: smaller;
+}

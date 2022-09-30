@@ -37,7 +37,7 @@ class Bike(models.Model):
         return f"{self.make} {self.model}"
 
 class Component(models.Model):
-    comptype = models.CharField(max_length=1, choices=COMPONENTS, default=COMPONENTS[2][0])
+    comptype = models.CharField('Component type:', max_length=1, choices=COMPONENTS, default=COMPONENTS[2][0])
     name = models.CharField(max_length=100)
     bike = models.ForeignKey(Bike, on_delete=models.CASCADE)
     

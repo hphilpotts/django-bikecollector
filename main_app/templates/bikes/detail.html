@@ -29,8 +29,9 @@
 
 <a name="Accessories">
 <div class="row">
-    <div class="col s6">
+    <div class="col s6 center-align card-title">
         <h5> Kit added to {{ bike.make }} {{ bike.model }} :</h5>
+        <br>
         {% if bike.accessories.count %}
             {% for accessory in bike.accessories.all %}
             <div class="card">
@@ -52,8 +53,9 @@
         {% endif %}
     </div>
 
-    <div class="col s6">
-        <h5>Available Kit</h5>
+    <div class="col s6 center-align card-title">
+        <h5>Available Kit : </h5>
+        <br>
         {% if accessories.count %}
             {% for accessory in accessories.all %}
             <div class="card">
@@ -77,6 +79,10 @@
 </div>
 </a>
 
+<hr>
+<br>
+<h5>Components on {{ bike.make }} {{ bike.model }} : </h5>
+
 <div>
 
     <table class="striped">
@@ -95,6 +101,12 @@
             {% endfor %}
         </tbody>
     </table>
+
+    <br>
+    <hr>
+    <br>
+    <h5>Add components : </h5>
+    <br>
 
     <form action="{% url 'add_component' bike.id %}" method="post">
         {% csrf_token %}
