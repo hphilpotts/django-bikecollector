@@ -176,6 +176,17 @@ index-filter \
 - Final tweaks made to visuals, Home and About pages.       
 - Screenshots below:        
 
+![Screenshot 2022-09-30 at 15 52 01](https://media.git.generalassemb.ly/user/44371/files/4288035f-9d25-4e5e-89e7-16f7cadbc57d)      
+
+![Screenshot 2022-09-30 at 15 52 30](https://media.git.generalassemb.ly/user/44371/files/c9ccc3f4-dc08-41dc-b38c-e546d5faea89)      
+
+![Screenshot 2022-09-30 at 15 52 56](https://media.git.generalassemb.ly/user/44371/files/d56fcefc-d3b8-4690-be26-bd50c2b4c60d)      
+
+![Screenshot 2022-09-30 at 15 53 15](https://media.git.generalassemb.ly/user/44371/files/b4648f3f-b039-4580-b12f-8227b1e8f4ee)       
+
+![Screenshot 2022-09-30 at 15 53 53](https://media.git.generalassemb.ly/user/44371/files/3481eebe-f324-4954-b110-b4cb44d45f47)      
+
+
 
 ---     
 
