@@ -26,7 +26,7 @@ Database `bikecollector` created in _pgAdmin4_, connected in `settings.py`. Migr
 - reversed list using `{% for bike in bikes reversed %}` - `bikes.reverse()` of course did not work!        
 - also able to capitalise `bike.material.0` using `{{bike.material.0 |title }}`.        
 
-27/09/22        
+27/09/22:        
 
 ### Creating Bike Model:        
 - creating Bike class in `models.py`, ran `makemigrations` and `migrate` without issue.            
@@ -53,6 +53,8 @@ Database `bikecollector` created in _pgAdmin4_, connected in `settings.py`. Migr
 - `/bikes/detail.html` created, CSS added.   
 
 - Also, hardcoded urls in `base.html` and `home.html` switched out for _Django_ `{% url %}`.        
+
+28/09/22        
 
 ### Using CBVs to implement Create, Edit and Delete:        
 
@@ -87,6 +89,8 @@ _Resolved through the use of_ `git push origin main --force`
 - Added `POST` path to `urls.py`, updated `action=""` in `detail.html`, added `def add_feeding` API to `view.py`.       
 - Tested working ok!          
 
+29/09/22:       
+
 ### Django Many-Many Models:        
 
 #### Creating a new model with all CBV CRUD Ops:        
@@ -110,12 +114,39 @@ _Need to get my head around exactly how this works:_
 - `/bikes/detail.html` updated to show non-added kit, buttons to add/remove.        
 - Eventually tested working ok: _had mixed up bike/accessory in some lines of code_.        
 
-#### Final tweaks:      
+#### Minor adjustments:      
 - formatting updated.               
-- `class BikeUpdate` edited to remove 'accessories' field.      
+- `class BikeUpdate` edited to remove 'accessories' field.          
+
+30/09/22:       
+
+### Django Authentication and Authorisation:        
+
+#### Collecting 'wild' bikes:       
+- `User` imported in `models.py`, user `FK` added to `Bike`.        
+- Migrated with `PK` of `1` as default so existing superuser can collect wild bikes.        
+
+#### Adding Authentication URLs:        
+- auth paths added to `/bikecollector/urls.py`, checked with expected `TemplateDoesNotExist` error.     
+- `login.html` templated added, checked working ok.     
+- form added, throws **404** error as expected, `LOGIN_REDIRECT_URL` added. Tested working ok.      
+
+#### Adding login option to nav bar, redirect on logout:        
+- Logout and Sign In links added with if statement to show appropriate link. Sign Up commented out as not yet built.        
+- Logout redirect to '/about/' added.     
+- All tested working ok.        
+
+#### Updating `bike_create` to assign to current user:      
+- `form_valid` overridden to automatically set `form.instance.user` to current user before returning to `super` function.       
+
+**Login functionality completed, using built-in Django resources**
+
+#### Signup with Django:        
+- 
 
 ### Remaining tasks:        
 - do something with the 'Home' and 'About' pages.       
+    - include signup / signin instructions on About    
 - add more entries!     
 
 

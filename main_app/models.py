@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models import Model
-from django.urls import reverse
+from django.urls import reverse     
+from django.contrib.auth.models import User
 
 COMPONENTS = (
     ('G', 'Gearset' ),
@@ -28,7 +29,8 @@ class Bike(models.Model):
     material_info = models.TextField(max_length=250) 
     description = models.TextField(max_length=250)
     image = models.CharField(max_length=100, default='no image added')
-    accessories = models.ManyToManyField(Accessory) 
+    accessories = models.ManyToManyField(Accessory)     
+    user = models.ForeignKey(User, on_delete=models.CASCADE) 
 
     def get_absolute_url(self):
         return reverse('detail', kwargs = {'bike_id': self.id})

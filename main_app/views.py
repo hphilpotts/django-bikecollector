@@ -10,6 +10,9 @@ from .forms import ComponentForm
 class BikeCreate(CreateView):
     model = Bike
     fields = ['make', 'model', 'year', 'material', 'material_info', 'description', 'image']
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 class BikeUpdate(UpdateView):
     moddel = Bike
