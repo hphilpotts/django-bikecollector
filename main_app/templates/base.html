@@ -30,6 +30,7 @@
                     <li><a href="{% url 'index' %}">Bike Index</a></li>
                     <li><a href="{% url 'accessories_create' %}">Add Kit</a></li>
                     <li><a href="{% url 'accessories_index' %}">Kit Index</a></li>
+                    <li> Welcome, {{ user.username }} </li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                     {% else %}
                     <li><a href="{% url 'signup' %}">Sign Up</a></li>

@@ -155,7 +155,16 @@ _Minor bugs found in templates when checking if new users creating bikes works o
 - _had used_ `bike.name` _in error_.        
 
 #### Authorisation:     
-- User can only view their own bikes: 
+- User can only view their own bikes -  `bike_index` in `views.py` updated with `.filter()`.        
+- All manual API routes protected with `@login_required` decorator, except Home, About and Sign Up.     
+- All CBV routes protected with `LoginRequiredMixin`.       
+
+#### Misc tasks:        
+- Welcome message added to detail.html.     
+- `.gitignore` file added.      
+- `.env` file added to protect Database name, user and password.        
+
+--  
 
 ### Remaining tasks:        
 - do something with the 'Home' and 'About' pages.       
