@@ -162,7 +162,13 @@ _Minor bugs found in templates when checking if new users creating bikes works o
 #### Misc tasks:        
 - Welcome message added to detail.html.     
 - `.gitignore` file added.      
-- `.env` file added to protect Database name, user and password.        
+- `.env` file added to protect Database name, user and password.      
+- `settings.py` erased from all previous commits to remove sensitive data using:        
+```
+index-filter \
+    'git rm -rf --cached --ignore-unmatch bikecollector/settings.py' HEAD
+```  
+
 
 --  
 
