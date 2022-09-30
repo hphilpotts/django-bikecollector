@@ -4,6 +4,8 @@ from .models import Bike, Accessory
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from .forms import ComponentForm
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
@@ -74,4 +76,19 @@ def assoc_accessory(req, bike_id, accessory_id):
 def unassoc_accessory(req, bike_id, accessory_id):
     Bike.objects.get(id = bike_id).accessories.remove(accessory_id)
     return redirect('detail', bike_id = bike_id)
+
+def signup(request):
+    error_message = ""
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('index')
+        else:
+            error_message = "Invalid signup - Please try again later"
+
+    form = UserCreationForm()
+    context = {'form': form, 'error_message': error_message }
+    return render(request, 'registration/signup.html', context)
     

@@ -142,7 +142,20 @@ _Need to get my head around exactly how this works:_
 **Login functionality completed, using built-in Django resources**
 
 #### Signup with Django:        
-- 
+- `signup` path added to `urls.py`.     
+- In `views.py`, manual `signup` API added.     
+- Checks if `request.method == "POST"`, if so checks if form input posted is valid.     
+- If `form.is_valid()`, creates user and then signs them in before redirecting to index, else gives error message.      
+- If not `POST` then (will be get) render signin page, will supply error messages (passed as `object` along with form).     
+- `base.html` updated to include Sign In link.      
+- `signup.html` template added.     
+- All tested working ok.        
+
+_Minor bugs found in templates when checking if new users creating bikes works ok, now resolved_:       
+- _had used_ `bike.name` _in error_.        
+
+#### Authorisation:     
+- User can only view their own bikes: 
 
 ### Remaining tasks:        
 - do something with the 'Home' and 'About' pages.       

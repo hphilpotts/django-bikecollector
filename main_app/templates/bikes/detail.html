@@ -17,7 +17,7 @@
     </div>
     <div class="detail-img-container">
         <a href="{% url 'detail' bike.id %}">
-            <img class="detail-img center" src="{{bike.image}}" alt="image of {{bike.name}}">
+            <img class="detail-img center" src="{{bike.image}}" alt="image of {{bike.make}}{{bike.model}}">
         </a>
     </div>
     <div class="center-align" id="detail-button-div">

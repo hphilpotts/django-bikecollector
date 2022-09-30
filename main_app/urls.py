@@ -20,6 +20,8 @@ urlpatterns = [
     path('accessories/<int:pk>/delete', views.AccessoryDelete.as_view(), name='accessories_delete'),
     # Associate/Unassociate Paths:
     path('bikes/<int:bike_id>/assoc_accessory/<int:accessory_id>', views.assoc_accessory, name='assoc_accessory'),
-    path('bikes/<int:bike_id>/unassoc_accessory/<int:accessory_id>', views.unassoc_accessory, name='unassoc_accessory')
+    path('bikes/<int:bike_id>/unassoc_accessory/<int:accessory_id>', views.unassoc_accessory, name='unassoc_accessory'),
+    # Signup Path:
+    path('accounts/signup/', views.signup, name='signup')
     
 ]
