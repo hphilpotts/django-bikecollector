@@ -1,3 +1,6 @@
+# Bike Collector App        
+# Django-postgreSQL Lab Deliverable     
+
 26/09/22:       
 
 ### Beginning project:      
@@ -169,12 +172,14 @@ index-filter \
     'git rm -rf --cached --ignore-unmatch bikecollector/settings.py' HEAD
 ```  
 
+#### Visual:        
+- Final tweaks made to visuals, Home and About pages.       
+- Screenshots below:        
 
---  
+
+---     
 
 ### Remaining tasks:        
-- do something with the 'Home' and 'About' pages.       
-    - include signup / signin instructions on About    
 - add more entries!     
 
 

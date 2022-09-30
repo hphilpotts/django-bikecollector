@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+{% load static %}
+
+<br><br><br>
     <h1>Welcome to Bike Collector!</h1>
-    <hr>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae a sequi explicabo quasi minus natus, debitis ea quaerat cupiditate impedit esse provident modi, accusantium excepturi nam officiis. Maiores, veniam ipsam!</p>
-    <hr>
-    <h4><a href="{% url 'index' %}">Let's see them bikes!</a></h4>
+    <br><hr><br>
+    <h5 class="center-align">Add up to n+1 bikes to your collection!</h5><br><hr><br>
+    <img src="{% static 'img/bikecollectorhomepage.avif' %}" alt="image of n+1 bikes" class="anysize-img">
+    <br><hr><br>
+    <h4 class="center-align"><a href="{% url 'index' %}">Let's see them bikes!</a></h4>
 
 {% endblock %}
     

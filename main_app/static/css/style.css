@@ -65,6 +65,11 @@ h1 {
     border-radius: 10px;
 }
 
+.anysize-img {
+    border: 5px solid #e57373;
+    border-radius: 10px;
+}
+
 #detail-button-div {
     padding-bottom: 10px;
 }
@@ -89,4 +94,9 @@ table {
 .select-dropdown {
     color: rgb(108, 108, 108);
     font-size: smaller;
+}
+
+.coral-text {
+    color: #e57373;
+    text-shadow: 1px 1px;
 }
