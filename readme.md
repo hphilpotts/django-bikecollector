@@ -7,10 +7,14 @@ This is a full stack app, written in _Python3_, using a _Django_ framework and a
 
 The purpose of creating this app was to consolidate a week of learning Django, ahead of beginning [Project 3](https://github.com/hphilpotts/Forage-Project-3-General-Assembly-SEI-66).      
 
-See login details below if you'd like to look around. Rough notes taken during building this app are also detailed below - these proved useful when 'resurrecting' the app after the course in order to host my work!              
+<!-- See login details below if you'd like to look around.        -->
 
-**Login**:
-_guestUser_ / _guestpw11_      
+This app was previously hosted on _Heroku_, however it was removed when the free tier closed 28/11/22. I have paused the search for free Django app hosting for now but will deploy the app again soon!     
+
+Rough notes taken during building this app are detailed below - these proved useful when 'resurrecting' the app after the course in order to host my work!              
+
+<!-- **Login**:
+_guestUser_ / _guestpw11_       -->
 
 26/09/22:       
 
@@ -200,7 +204,7 @@ index-filter \
 
 ---     
 
-_Note_: app previously hosted on _Heroku_, redeployed 28/11/22 to .     
+<!-- _Note_: app previously hosted on _Heroku_, removed when free tier closed down 28/11/22.           -->
 
 ---     
 
