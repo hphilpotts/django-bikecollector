@@ -1,8 +1,16 @@
 # Bike Collector App        
 # Django-postgreSQL Lab Deliverable     
 
-**Login**
-_guestUser_ || _guestpw11_      
+I created this simple Django-based web app as a 'deliverable' homework as part of General Assembly London's Software Engineering course.        
+
+This is a full stack app, written in _Python3_, using a _Django_ framework and a _PostgreSQL_ database. It has been styled using the _Materialize_ CSS library.     
+
+The purpose of creating this app was to consolidate a week of learning Django, ahead of beginning [Project 3](https://github.com/hphilpotts/Forage-Project-3-General-Assembly-SEI-66).      
+
+See login details below if you'd like to look around. Rough notes taken during building this app are also detailed below - these proved useful when 'resurrecting' the app after the course in order to host my work!              
+
+**Login**:
+_guestUser_ / _guestpw11_      
 
 26/09/22:       
 
