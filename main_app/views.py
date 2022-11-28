@@ -21,8 +21,8 @@ class BikeCreate(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 class BikeUpdate(LoginRequiredMixin, UpdateView):
-    moddel = Bike
-    fields = '__all__'
+    model = Bike
+    fields = ['make', 'model', 'year', 'material', 'material_info', 'description', 'image']
 
 class BikeDelete(LoginRequiredMixin, DeleteView):
     model = Bike

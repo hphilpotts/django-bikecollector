@@ -1,6 +1,9 @@
 # Bike Collector App        
 # Django-postgreSQL Lab Deliverable     
 
+**Login**
+_guestUser_ || _guestpw11_      
+
 26/09/22:       
 
 ### Beginning project:      
@@ -187,6 +190,9 @@ index-filter \
 ![Screenshot 2022-09-30 at 15 53 53](https://media.git.generalassemb.ly/user/44371/files/3481eebe-f324-4954-b110-b4cb44d45f47)      
 
 
+---     
+
+_Note_: app previously hosted on _Heroku_, redeployed 28/11/22 to .     
 
 ---     
 
